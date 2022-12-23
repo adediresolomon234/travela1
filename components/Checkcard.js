@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const Checkout1 = () => {
+const Checkout1 = ({checkingout}) => {
     const countries = ["China", "Russia", "UK"];
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState("");
     const [country, setCountry] = useState("United States");
 
     const changeText = (e) => {
@@ -118,3 +118,15 @@ const Checkout1 = () => {
 };
 
 export default Checkout1;
+export async function getServerSideProps() {
+    const checkingout = await fetch ("https://www.jsonkeeper.com/b/XRE1").then ((res) => {
+        res.json();
+        console.log("Hello")
+        // localStorage.setItem('name', JSON.stringify(res.json()))
+     });
+       
+    return{
+        props:{
+checkingout}
+    }
+}
