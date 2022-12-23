@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily:{
        Raleway:[
-          "Raleway,Arial,Helvetica,san-sans-serif",
+          "Montserrat Alternates, sans-serif",
           {fontFeatureSettings: '"cv11","ss01'}
         ]
       }
