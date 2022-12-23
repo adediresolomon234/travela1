@@ -20,9 +20,9 @@ export default function Home({ exploreData,cardsData} ) {
       </Head>
 
       <Header />
-      <section id ="hero">
-      <Banner />
-      </section>
+        <section id ="hero">
+        <Banner />
+        </section>
 
       
       <Mainbanner />
