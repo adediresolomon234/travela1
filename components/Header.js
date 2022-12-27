@@ -16,6 +16,8 @@ import { useRouter } from 'next/router';
 function Header({placeholder}) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
+  const [startTime, setStartTime] = useState(1);
+  const [endTime, setEndTime] = useState(1);
   const [endDate, setEndDate] = useState(new Date());
   const [noOfLuggages, setNoOfLuggages] = useState(1);
   const [Hours, setNoOfHours] = useState(1);
@@ -37,8 +39,10 @@ const search = () => {
       location: searchInput,
       startDate: startDate.toISOString(),
       endDate: endDate.toISOString(),
+      startTime,
+      endTime,
       noOfLuggages,
-      Hours,
+     
     }
   });
 };
@@ -47,6 +51,8 @@ const search = () => {
   const selectionRange = {
     startDate:startDate,
     endDate:endDate,
+    startTime: startTime,
+    endDate: endTime,
     key:'selection',
   };
 
@@ -66,7 +72,7 @@ const search = () => {
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
         className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400" type="text" placeholder = {placeholder|| "Search for Location"} />
-        <SearchIcon className="hidden md:inline-flex  h-8 bg-amber-600 text-white rounded-full p-2 cursor-pointer md: mx-2" />
+        <SearchIcon  className="hidden md:inline-flex  h-8 bg-amber-600 text-white rounded-full p-2 cursor-pointer md: mx-2" />
       </div>
 
       {/* Right */}
@@ -88,29 +94,14 @@ const search = () => {
            onChange={handleSelect}
           />
        
-        <div className="flex items-center border-b mb-4">
-            <h2 className="text-1xl flex-grow font-semibold">Number Of Luggage</h2>
-             <BriefcaseIcon className="h-5" />
-             <input
-              value={noOfLuggages} 
-              onChange= {e => setNoOfLuggages(e.target.value)}
-             type="number" 
-             min={1}
-             className="w-12 pl-2 text-lg outline-none text-amber-600" />
-           </div>
-           <div className="flex items-center border-b mb-4">
-          <ClockIcon className="h-5" />
-             <input
-              value={Hours} 
-              onChange= {e => setNoOfHours(e.target.value)}
-             type="number" 
-             min={1}
-             className="w-12 pl-2 text-lg outline-none text-amber-600" />
-          </div>
+       
+   
            <div className="flex ">
             <button onClick={resetInput} className="flex-grow text-gray-500">Cancel</button>
             <button onClick={(search)} className="flex-grow text-amber-600">Search</button>
            </div>
+        
+           
         </div>
       
       )}

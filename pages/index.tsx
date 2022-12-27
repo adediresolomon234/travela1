@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
+import Nippy from "../components/Nippy"
 import Mainbanner from "../components/Mainbanner";
 import Explore from "../components/Explore";
 import MediumCard from "../components/MediumCard";
@@ -8,11 +9,14 @@ import TravelApp  from "../components/TravelApp";
 import Footer from "../components/Footer";
 
 
+
+
 // import How_it_works from "../components/How_it_works"
 // import Image from 'next/image'
 
 export default function Home({ exploreData,cardsData} ) {
   return (
+
     <div className="">
       <Head>
         <title>Travela Stroage</title>
@@ -20,9 +24,9 @@ export default function Home({ exploreData,cardsData} ) {
       </Head>
 
       <Header />
-        <section id ="hero">
-        <Banner />
-        </section>
+      <section id ="hero">
+      <Banner />
+      </section>
 
       
       <Mainbanner />
@@ -50,11 +54,15 @@ export default function Home({ exploreData,cardsData} ) {
     </div>
    </section>
    <section id ="hero">
+     <Nippy />
+   </section>
+   <section id ="hero">
      <TravelApp />
    </section>
       </main>
       <Footer />
     </div>
+ 
   );
 }
 

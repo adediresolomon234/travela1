@@ -3,8 +3,9 @@ import {HeartIcon} from "@heroicons/react/outline"
 import { StarIcon } from "@heroicons/react/solid";
 import { useRouter } from 'next/router';
 
-function LocationCard ({img, location, title, description, star, price, total}) {
+function LocationCard ({id,img, location, title, description, star, price, total}) {
     const router = useRouter();
+    const { pid } = router.query
     return( 
     <div className="flex py-7 px-2 mb-11 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out border-t" >
        <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
@@ -26,6 +27,7 @@ function LocationCard ({img, location, title, description, star, price, total}) 
             </p>
             <div>
             <p className="text-lg  lg:text-2xl font-semibold pb-2">{price}</p>
+            
             <p className="text-right font-extralight"></p>
             </div>
         </div>
@@ -33,8 +35,19 @@ function LocationCard ({img, location, title, description, star, price, total}) 
         <p className="text-sm  lg:text-1xl font-semibold pb-2">More Details</p>
             <div  class="shadow-md mt-5 font-bold py-2 px-2 text-white cursor-pointer md:block
              bg-amber-600 hover:shadow-xl rounded-full text-sm text-center active:scale-90  
-             transition duration-150 w-36" type="button" onClick= {() =>  router.push('')}>Book</div> 
-           
+             transition duration-150 w-36" type="button" onClick= {() => 
+                router.push({
+                    pathname: '/checkout/id',
+                    query: {id: id },
+                  })
+                // router.push({
+                //     pathname: '/checkout/[id]',
+                //     query: { checkout:id },
+                // })
+          
+              
+              }>Book</div> 
+             {pid}
             </div>
         </div>
        </div>

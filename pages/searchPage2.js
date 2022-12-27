@@ -42,7 +42,7 @@ const search = () => {
   };
 
  
-   const router = useRouter ()
+  
 
   return (
     <div className="m-auto max-w-6xl pt-12 sm: px-16  items-center ">

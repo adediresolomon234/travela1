@@ -1,5 +1,5 @@
 import MediumCard from "./MediumCard";
-
+import'animate.css';
 export default function DestinationsCard({ cardsData} ) {
   return(
     <div>

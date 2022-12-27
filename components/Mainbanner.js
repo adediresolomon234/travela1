@@ -5,6 +5,7 @@ import {
     HomeIcon,
     EmojiHappyIcon,
     
+    
   } from '@heroicons/react/solid';
 
 function mainbanner() {

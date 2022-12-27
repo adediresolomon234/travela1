@@ -1,5 +1,6 @@
 import React from 'react';
 import {useRouter} from 'next/router';
+import 'animate.css';
 
 function Banner() {
  
@@ -22,7 +23,7 @@ function Banner() {
             </div>
         </div>
         <div className=" md:w-1/2">
-            <img className="w-800 h-900" src="banner-1.svg " alt="banner-1" />
+            <img className="w-800 h-900 rounded-2xl animate__animated animate__fadeInRight" src="banner-1.svg " alt="banner-1" />
         </div>
         </div>     
    
