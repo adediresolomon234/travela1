@@ -9,10 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-       Raleway:[
-          "Montserrat Alternates, sans-serif",
-          {fontFeatureSettings: '"cv11","ss01'}
-        ]
+        rubik:'Rubik, sans-serif'
       }
     },
   },

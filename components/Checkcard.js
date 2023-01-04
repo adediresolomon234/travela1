@@ -15,8 +15,8 @@ const Checkout1 = ({id,img, location, title, description, star, price, total,hou
     };
 
     return (
-        <div className=" rounded-2xl ">
-        <div className="flex justify-center items-center">
+        <div className=" rounded-2xl font-rubik ">
+        <div className="flex justify-center font-rubik items-center">
             <div className="py-16 px-4 md:px-6 2xl:px-0 flex justify-center items-center 2xl:mx-auto 2xl:container">
                 <div className="flex flex-col justify-start items-start w-full space-y-9">
                     <div className="flex justify-start flex-col item-center items-start space-y-2">

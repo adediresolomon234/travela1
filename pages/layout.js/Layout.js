@@ -7,7 +7,7 @@ import {
 
 export default function Layout ({children}){
   return(
-    <div className="bg-gray-100  min-h-screen flex items-center justify-center">
+    <div className="bg-gray-100 font-rubik min-h-screen flex items-center justify-center">
      <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
           <div className="md:w-1/2 px-16"> 
            <h2 className="font-bold text-amber-600">Login</h2>

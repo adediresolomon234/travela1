@@ -10,7 +10,7 @@ import {
 
 function mainbanner() {
   return (
-    <main className="max-w-6xl mx-auto px-8 sm:px-16 " >
+    <main className="max-w-6xl mx-auto font-rubik px-8 sm:px-16 " >
     <section className="pt-6 ">
  
      <h2 className=" text-3xl font-semibold pb-5 text-center mt-12 ">How It Works</h2>

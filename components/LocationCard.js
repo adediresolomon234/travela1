@@ -7,7 +7,7 @@ function LocationCard ({id,img, location, title, description, star, price, total
     const router = useRouter();
     const { pid } = router.query
     return( 
-    <div className="flex py-7 px-2 mb-11 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out border-t" >
+    <div className="flex py-7 px-2 font-rubik mb-11 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out border-t" >
        <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
         <Image src={img} layout="fill" objectFit="cover" className="rounded-2xl" />
        </div>
@@ -32,7 +32,7 @@ function LocationCard ({id,img, location, title, description, star, price, total
             </div>
         </div>
         <div className="flex justify-between items-end pt-5">
-        <p className="text-sm  lg:text-1xl font-semibold pb-2">More Details</p>
+        <p className="text-sm  lg:text-1xl font-rubik font-semibold pb-2">More Details</p>
             <div  class="shadow-md mt-5 font-bold py-2 px-2 text-white cursor-pointer md:block
              bg-amber-600 hover:shadow-xl rounded-full text-sm text-center active:scale-90  
              transition duration-150 w-36" type="button" onClick= {() => 

@@ -30,11 +30,11 @@ export default function Home({ exploreData,cardsData} ) {
 
       
       <Mainbanner />
-     <main className="max-w-6xl mx-auto px-8 sm:px-16 mt-11">
+     <main className="max-w-6xl font-rubik  mx-auto px-8 sm:px-16 mt-11">
         <section className="pt-6">
-          <h2 className="text-2xl font-semibold pb-5">Explore Nearby Stroage
+          <h2 className="text-3xl font-semibold pb-5">Explore Nearby Stroage
           </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 font-rubik sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {exploreData?.map(({ img, distance, location}) => (
         <Explore 
         key={img}
@@ -46,16 +46,14 @@ export default function Home({ exploreData,cardsData} ) {
       </div>
     </section>
     <section>
-    <h2 className="text-2xl font-semibold py-8 ">Top Destinations</h2>
+    <h2 className="text-3xl font-rubik font-semibold py-8 ">Top Destinations</h2>
     <div className=" flex space-x-3 overflow-scroll scrollbar-hide p-3 -nl-3">
      {cardsData?.map(({img , title }) => (
       <MediumCard  key= { img } img= { img } title ={ title } />
       ))}
     </div>
    </section>
-   <section id ="hero">
-     <Nippy />
-   </section>
+   
    <section id ="hero">
      <TravelApp />
    </section>
